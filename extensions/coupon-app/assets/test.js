@@ -117,7 +117,7 @@ $(document).ready(function(){
   function renderDiscountForm(){
 	let itemDiscount,cartDiscount,shippingDiscount;
 	
-    $('.cart-drawer__footer').append('<form class="coupon-form" /><input type="text" id="mycoupon" name="mycoupon" placeholder="Discount Codes"><button  class="copuncode" style=" border: 1px solid rgb(53, 139, 171);color: rgb(255, 255, 255); background-color: rgb(53, 139, 171);,">Apply</button></form>');
+    $('.cart-drawer__footer').append('<form class="coupon-form" /><input type="text" id="mycoupon" name="mycoupon" placeholder="Discount Codes"><button  class="copuncode" style=" border: 1px solid rgb(90, 50, 10);color: rgb(255, 255, 255); background-color: rgb(53, 139, 171);,">Apply</button></form>');
     let discountData = localStorage.getItem('discount__code');
     if(discountData != ''){
 		$.getJSON('/cart.js', function(cart) {
