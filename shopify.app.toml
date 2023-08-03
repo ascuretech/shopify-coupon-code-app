@@ -1,29 +1,26 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
 name = "Ascure-app"
 client_id = "df1a5ac4600d89a813e59e066501a0a2"
 application_url = "https://new-ascure-discount-app.onrender.com/"
 embedded = true
 
 [access_scopes]
-scopes = "read_products,write_products"
-use_legacy_install_flow = true
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
 
 [auth]
 redirect_urls = [
   "https://new-ascure-discount-app.onrender.com/auth/callback",
-  "https://new-ascure-discount-app.onrender.com/auth/oauth/callback",
+  "https://new-ascure-discount-app.onrender.com/auth/shopify/callback",
+  "https://new-ascure-discount-app.onrender.com/api/auth/callback"
 ]
 
 [webhooks]
 api_version = "2023-07"
-[webhooks.privacy_compliance]
-customer_deletion_url = "https://new-ascure-discount-app.onrender.com/wh/customer_deletion"
-customer_data_request_url = "https://new-ascure-discount-app.onrender.com/wh/customer_request"
-shop_deletion_url = "https://new-ascure-discount-app.onrender.com/wh/deletion"
-
 
 [pos]
 embedded = false
-
 
 [build]
 automatically_update_urls_on_dev = true
